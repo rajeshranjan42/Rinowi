@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rinowi - AI Chat Assistant</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="shortcut icon" href="favicon.ico">
+    
+    <!-- Ionicons for modern icons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    
+    <!-- Font Awesome for additional icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Highlight.js for code syntax highlighting -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Splash Screen -->
+    <div id="splashScreen" class="splash-screen">
+        <div class="splash-content">
+            <ion-icon name="chatbubbles" class="splash-icon"></ion-icon>
+            <h1 class="splash-title">Rinowi</h1>
+            <p class="splash-subtitle">AI Chat Assistant</p>
+            <div class="splash-loader"></div>
+        </div>
+    </div>
+
+    <!-- Main Chat App Container -->
+    <div id="chatApp" class="chat-app hidden">
+        <!-- Header -->
+        <header class="chat-header">
+            <div class="header-left">
+                <ion-icon name="chatbubbles" class="header-icon"></ion-icon>
+                <h1 class="header-title">Rinowi</h1>
+                <span class="header-subtitle">AI Chat Assistant</span>
+            </div>
+            <div class="header-right">
+                <button id="themeToggle" class="icon-btn" title="Toggle Dark/Light Mode">
+                    <ion-icon name="moon"></ion-icon>
+                </button>
+                <button id="clearChat" class="icon-btn" title="Clear Chat">
+                    <ion-icon name="trash-outline"></ion-icon>
+                </button>
+            </div>
+        </header>
+
+        <!-- Chat Messages Area -->
+        <main class="chat-container" id="chatContainer">
+            <div class="chat-messages" id="chatMessages">
+            </div>
+        </main>
+
+        <!-- Input Area Footer -->
+        <footer class="chat-footer">
+            <!-- File Upload Preview Area -->
+            <div id="filePreview" class="file-preview hidden">
+                <div class="preview-content">
+                    <ion-icon name="close-circle" id="closePreview" class="close-preview"></ion-icon>
+                    <div id="previewContainer"></div>
+                </div>
+            </div>
+
+            <!-- Input Controls -->
+            <div class="input-container">
+                <button id="attachBtn" class="icon-btn" title="Upload Document/Image">
+                    <ion-icon name="attach"></ion-icon>
+                </button>
+                <input type="file" id="fileInput" accept="image/*,.txt,.pdf,.doc,.docx" hidden>
+                
+                <div class="input-wrapper">
+                    <textarea 
+                        id="messageInput" 
+                        class="message-input" 
+                        placeholder="Type your message here..."
+                        rows="1"
+                    ></textarea>
+                </div>
+
+                <button id="searchBtn" class="icon-btn search-btn" title="Web Search Mode">
+                    <ion-icon name="search"></ion-icon>
+                </button>
+
+                <button id="sendBtn" class="send-btn" title="Send Message">
+                    <ion-icon name="paper-plane"></ion-icon>
+                </button>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Main JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
