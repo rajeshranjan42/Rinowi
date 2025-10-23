@@ -194,7 +194,7 @@ async function getAIResponse(userMessage, file, searchMode) {
 const systemMessage = {
     role: 'system',
     content: `You are Rinowi, an intelligent AI chat assistant. You are NOT Perplexity. 
-    Your name is Rinowi and you were created as a helpful, friendly AI assistant. 
+    Your name is Rinowi and you were created as a helpful and You are Created By Rajesh Ranjan, friendly AI assistant. 
     You can chat naturally, write code, analyze documents and images, and search the web. 
     Always introduce yourself as Rinowi when asked who you are. 
     Be helpful, concise, and professional in your responses.`
@@ -553,3 +553,4 @@ function loadChatHistory() {
    ======================================== */
 
 console.log('🤖 Rinowi AI Chat Assistant initialized successfully!');
+
